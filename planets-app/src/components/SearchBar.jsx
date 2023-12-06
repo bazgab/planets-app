@@ -1,6 +1,14 @@
 
 import { useState } from 'react'
 import './SearchBar.css'
+import Jupiter from './Jupiter';
+import Saturn from './Saturn';
+import Uranus from './Uranus';
+import Neptune from './Neptune';
+import Earth from './Earth';
+import Venus from './Venus';
+import Mars from './Mars';
+import Mercury from './Mercury';
 
 export default function SearchBar() {
   const [selected, setSelected] = useState('Jupiter')
@@ -20,15 +28,18 @@ export default function SearchBar() {
             <option>Earth</option>
             <option>Mars</option>
             <option>Venus</option>
+            <option>Mercury</option>
 
         </select>
-        {selected == 'Jupiter'? <SearchBar />: ''}
-        {selected == 'Saturn'? <SearchBar />: ''}
-        {selected == 'Uranus'? <SearchBar />: ''}
-        {selected == 'Neptune'? <SearchBar />: ''}
-        {selected == 'Earth'? <SearchBar />: ''}
-        {selected == 'Mars'? <SearchBar />: ''}
-        {selected == 'Venus'? <SearchBar />: ''}
+        {selected == 'Jupiter'? <Jupiter />: ''}
+        {selected == 'Saturn'? <Saturn />: ''}
+        {selected == 'Uranus'? <Uranus />: ''}
+        {selected == 'Neptune'? <Neptune />: ''}
+        {selected == 'Earth'? <Earth />: ''}
+        {selected == 'Venus'? <Venus />: ''}
+        {selected == 'Mars'? <Mars />: ''}
+        {selected == 'Mercury'? <Mercury />: ''}
+        
         
 
     </div>
